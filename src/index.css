@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@keyframes borderBeam {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes spinConicSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes chaseLightPulse {
+  0%, 100% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.8));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(168, 85, 247, 1));
+  }
+}
+
+.animate-spin-slow {
+  animation: spinConicSlow 3.5s linear infinite;
+}
+
+.animate-chase-pulse {
+  animation: chaseLightPulse 2s ease-in-out infinite;
+}
+
+@keyframes lightShimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes neonAuraPulse {
+  0%, 100% {
+    opacity: 0.6;
+    filter: blur(12px) drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(16px) drop-shadow(0 0 20px rgba(129, 140, 248, 0.8));
+    transform: scale(1.04);
+  }
+}
+
+@keyframes textGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-light-sweep {
+  animation: lightShimmerSweep 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-neon-aura {
+  animation: neonAuraPulse 3s ease-in-out infinite;
+}
+
+.animate-text-flow {
+  background-size: 200% auto;
+  animation: textGradientFlow 4s ease infinite;
+}

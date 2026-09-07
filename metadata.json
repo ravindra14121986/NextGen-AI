@@ -1,0 +1,6 @@
+{
+  "name": "API Usage & Cost Intelligence Hub",
+  "description": "Production monitoring, cost analytics, and relational database explorer for Neon PostgreSQL api_usage_logs, chat sessions, user subscriptions, and AI telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

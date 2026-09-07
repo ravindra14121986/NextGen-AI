@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: api-usage-cost-intelligence-hub
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm run build
+    startCommand: node ./dist/server.cjs
+    rootDir: .
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PGHOST
+        scope: build,runtime
+      - key: PGDATABASE
+        scope: build,runtime
+      - key: PGUSER
+        scope: build,runtime
+      - key: PGPASSWORD
+        scope: build,runtime
+      - key: PGPORT
+        scope: build,runtime
